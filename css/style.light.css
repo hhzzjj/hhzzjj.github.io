@@ -461,7 +461,7 @@ code {
 }
 html,
 body {
-  color: #555;
+  color: #000;
   background-color: #fff;
   font-size: 100%; /* add PX (or original value) as backup */
   font-size: 100%;
@@ -477,7 +477,7 @@ a:hover {
   cursor: pointer;
 }
 strong {
-  color: #555;
+  color: #000;
 }
 h1,
 h2,
@@ -485,7 +485,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #555;
+  color: #000;
 }
 .site-header {
   padding: 2.5rem 0;
@@ -505,7 +505,7 @@ h6 {
 .site-header .page-title {
   color: #1999ec;
   text-align: center;
-  text-shadow: 1px 1px 2px #555;
+  text-shadow: 1px 1px 2px #000;
 }
 .site-header .page-title.with-background-image {
   color: #fff;
@@ -517,7 +517,7 @@ h6 {
 .site-menu {
   text-align: center;
   margin-top: 0.625rem;
-  text-shadow: 3px 3px 3px #555;
+  text-shadow: 3px 3px 3px #000;
 }
 .site-menu ul {
   margin: 0 auto;
@@ -628,6 +628,9 @@ h6 {
 .post-item-wrapper .tags .untagged {
   color: #1999ec;
 }
+.search-result-list li {
+  padding: 15px 50px;
+}
 @media only screen and (max-width: 768px) {
   .post-item-wrapper .date-and-category,
   .post-item-wrapper .tags {
@@ -641,6 +644,9 @@ h6 {
   }
   .post-item-wrapper .post-title {
     font-size: 1.125rem;
+  }
+  .search-result-list li {
+    padding: 10px 20px;
   }
 }
 .archive-item {

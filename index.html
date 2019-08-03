@@ -13,6 +13,7 @@
   <meta property="og:site_name" content="Gin&#39;s Blogs">
   <meta property="og:type" content="website">
   <meta property="og:image" content="http://yoursite.com">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
   
     <link rel="alternate" href="/atom.xml" title="Gin&#39;s Blogs" type="application/atom+xml">
   
@@ -20,6 +21,8 @@
     <link rel="icon" href="/favicon.png">
   
 
+
+  <script type="text/javascript" charset="utf-8" async src="/js/search.js"></script>
   <!-- Site Title -->
   <title>Gin's Blogs</title>
 
@@ -90,6 +93,14 @@
 
 <!-- Home Page Post List -->
 <div class="container">
+  
+    <div id="site_search">
+      <input type="text" id="local-search-input" name="q" results="0" placeholder="search my blog..." 
+class="form-control"/>
+      <div id="local-search-result"></div>
+    </div>
+
+
   <div class="row">
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
@@ -189,6 +200,14 @@
       hljs.highlightBlock(block);
     });
   });
+</script>
+<script type="text/javascript">      
+     var search_path = "search.xml";
+     if (search_path.length == 0) {
+     	search_path = "search.xml";
+     }
+     var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
 </script>
 
   </body>

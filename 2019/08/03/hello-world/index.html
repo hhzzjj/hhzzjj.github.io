@@ -13,6 +13,7 @@
   <meta property="og:site_name" content="Gin&#39;s Blogs">
   <meta property="og:type" content="article">
   <meta property="og:image" content="http://yoursite.com">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
   
     <link rel="alternate" href="/atom.xml" title="Gin&#39;s Blogs" type="application/atom+xml">
   
@@ -20,6 +21,8 @@
     <link rel="icon" href="/favicon.png">
   
 
+
+  <script type="text/javascript" charset="utf-8" async src="/js/search.js"></script>
   <!-- Site Title -->
   <title>Gin's Blogs</title>
 
@@ -100,7 +103,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-08-03</span>
-            <span class="time">18:26:27</span>
+            <span class="time">18:58:16</span>
           </span>
           
         </div>
@@ -156,6 +159,14 @@
       hljs.highlightBlock(block);
     });
   });
+</script>
+<script type="text/javascript">      
+     var search_path = "search.xml";
+     if (search_path.length == 0) {
+     	search_path = "search.xml";
+     }
+     var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
 </script>
 
   </body>

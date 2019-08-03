@@ -635,6 +635,9 @@ h6 {
 .post-item-wrapper .tags .untagged {
   color: $theme-color;
 }
+.search-result-list li {
+  padding: 15px 50px;
+}
 @media only screen and (max-width: 768px) {
   .post-item-wrapper .date-and-category,
   .post-item-wrapper .tags {
@@ -648,6 +651,9 @@ h6 {
   }
   .post-item-wrapper .post-title {
     font-size: 1.125rem;
+  }
+  .search-result-list li {
+    padding: 10px 20px;
   }
 }
 .archive-item {
