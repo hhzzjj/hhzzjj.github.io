@@ -480,8 +480,8 @@ html,
 body {
   color: $theme-text-color;
   background-color: $theme-background;
-  font-size: 100%; /* add PX (or original value) as backup */
-  font-size: 100%;
+  font-size: 110%; /* add PX (or original value) as backup */
+  font-size: 110%;
 }
 a {
   color: $theme-color;
