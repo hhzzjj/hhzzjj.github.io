@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[关于我]]></title>
+    <url>%2F2019%2F08%2F03%2FAboutMe%2F</url>
+    <content type="text"><![CDATA[97年冬月。出生于四川宜宾。 北京邮电大学通信工程本科在读，目前实习于AWS产品市场部门。 对大多数新兴技术抱有浓厚兴趣，却常因个人的懒惰而无法坚持下去，绝大多数的领域都只知其皮毛。 客观评价自己，玩心很重+三分钟热情。 喜欢动漫、游戏、音乐。更多时候，我认为人生于这个世界，就是应该去享受生活的，而非被生活所压迫。 但打算踏入互联网领域，选择将来成为一名程序员的自己，其实也是只能负载前行罢了。 这就是我，一个平凡的我。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F08%2F03%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
