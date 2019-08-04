@@ -102,7 +102,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-08-04</span>
-            <span class="time">21:51:14</span>
+            <span class="time">22:03:45</span>
           </span>
           
           <!--  Categories  -->
@@ -134,25 +134,21 @@
 <h2 id="博客的基础搭建过程"><a href="#博客的基础搭建过程" class="headerlink" title="博客的基础搭建过程"></a>博客的基础搭建过程</h2><h3 id="1-安装-Git"><a href="#1-安装-Git" class="headerlink" title="1. 安装 Git"></a>1. 安装 Git</h3><p>我们需要通过git来管理和上传我们的博客文章到github，所以，首先我们需要到git官网上<a href="https://gitforwindows.org/" target="_blank" rel="noopener">下载</a>,之后会有一个Git Bash的工具，打开Git Bash后，我们就可以得到命令行窗口（这个比WIN自带的好用太多了）</p>
 <h3 id="2-安装-nodejs"><a href="#2-安装-nodejs" class="headerlink" title="2. 安装 nodejs"></a>2. 安装 nodejs</h3><p>因为Hexo是基于nodejs所编写，所以我们需要<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">下载安装</a>nodejs和npm工具（选择LTS版本即可）</p>
 <p>安装完毕后，我们在Git Bash的命令行窗口输入命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ node -v
+$ npm -v</code></pre>
 <p>检查是否安装成功，安装成功会显示对应地版本号</p>
 <h3 id="3-安装-hexo"><a href="#3-安装-hexo" class="headerlink" title="3. 安装 hexo"></a>3. 安装 hexo</h3><p>可以先创建一个单独的文件夹 blog，然后 <code>cd</code> 到该文件夹去，由于我创建的路径为 d:\blog，所以直接在命令行输入进入该文件夹的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> d:/blog</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ cd d:/blog</code></pre>
 <p>然后输入命令安装 hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ npm install -g hexo-cli</code></pre>
 <p>再用</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ hexo -v</code></pre>
 <p>查看版本，检查一下是否安装成功</p>
 <p>然后再初始化一下 hexo（这个myblog自己取什么名字都行，以后的相对应的文件都会放在 myblog下，操作也会在该文件夹下进行）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myblog</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ hexo init myblog</code></pre>
 <p>接着</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span>  myblog //进入这个myblog文件夹</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ cd  myblog //进入这个myblog文件夹
+$ npm install</code></pre>
 <p>这样，指定文件夹目录下面就会多出：</p>
 <ul>
 <li>node_modules: 依赖包</li>
@@ -162,8 +158,8 @@
 <li>themes：主题</li>
 <li>_config.yml: 博客的配置文件</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ hexo g
+$ hexo server</code></pre>
 <p>这样我们就打开了hexo服务，在浏览器输入 localhost:4000 就可以看到自己生成的博客页面了</p>
 <p>大概长这样</p>
 <p><img src="/2019/08/04/Blog-Building-Process-1/1.jpg" alt="hexo初始博客图"></p>
@@ -174,14 +170,13 @@
 <p><img src="/2019/08/04/Blog-Building-Process-1/3.png" alt="GitHub仓库命名"></p>
 <p>然后点击 create repository，这样，我们的博客仓库就建好了。</p>
 <h3 id="5-生成-SSH-添加到-GitHub"><a href="#5-生成-SSH-添加到-GitHub" class="headerlink" title="5.生成 SSH 添加到 GitHub"></a>5.生成 SSH 添加到 GitHub</h3><p>回到 git bash中，执行下述命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"yourname"</span>    //这里输入你GitHub的用户名</span><br><span class="line">$ git config --global user.email <span class="string">"youremail"</span>  //这里输入你GitHub的邮箱</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ git config --global user.name &quot;yourname&quot;    //这里输入你GitHub的用户名
+$ git config --global user.email &quot;youremail&quot;  //这里输入你GitHub的邮箱</code></pre>
 <p>然后可以用下述命令检查是否输对</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ git config user.name
+$ git config user.email</code></pre>
 <p>然后创建SSH，一直回车就可以了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail"</span></span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ ssh-keygen -t rsa -C &quot;youremail&quot;</code></pre>
 <p>接着去自己电脑 C 盘的用户文件夹中找到自己登陆的用户名（我登录的用户名为he083），进入对应文件夹后，找到 .ssh文件夹。打开后如图所示</p>
 <p><img src="/2019/08/04/Blog-Building-Process-1/4.png" alt=".ssh文件夹内容"></p>
 <p>其中，id_rsa是你电脑的私人秘钥，不能给别人看的。而 id_rsa.pub 是公共秘钥，可以给别人看。</p>
@@ -189,28 +184,34 @@
 <p><img src="/2019/08/04/Blog-Building-Process-1/5.png" alt="公钥粘贴"></p>
 <p>我们把公钥粘贴到 GitHub上的意义在于，当你再用本电脑链接 GitHub后，它就会根据公钥匹配你的私钥，当公钥和私钥能够相互匹配时，才能够顺利的通过git上传你的文件到 GitHub上。</p>
 <p>在 gitbash中，输入下面指令查看是否成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
+<pre><code class="bash">$ ssh -T git@github.com</code></pre>
 <p>当时我完成到这一步的时候，没有成功，报错 “ssh: connect to host github.com port 22: Connection timed out”</p>
 <p>这个时候请返回到 .ssh文件夹中，找到config文件，如果没有就创建一个（没有后缀，就是 config文件，可以先创建为文本文件，然后删掉 .txt），然后用记事本打开 config文件，在其中原封不动地粘贴如下代码即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line"></span><br><span class="line">User git</span><br><span class="line"></span><br><span class="line">Hostname ssh.github.com</span><br><span class="line"></span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line"></span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure>
+<pre><code>Host github.com
 
-<p>保存并退出后，再次输入下面指令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+User git
 
+Hostname ssh.github.com
+
+PreferredAuthentications publickey
+
+IdentityFile ~/.ssh/id_rsa
+
+Port 443</code></pre><p>保存并退出后，再次输入下面指令</p>
+<pre><code class="bash">$ ssh -T git@github.com</code></pre>
 <p>提示连接成功！</p>
 <p><img src="/2019/08/04/Blog-Building-Process-1/6.png" alt="提示连接成功"></p>
 <h3 id="6-将-Hexo-部署到-GitHub"><a href="#6-将-Hexo-部署到-GitHub" class="headerlink" title="6. 将 Hexo 部署到 GitHub"></a>6. 将 Hexo 部署到 GitHub</h3><p>我们已经能够连接到 GitHub了，下一步，我们就要将我们在本地创建的东西给部署到 GitHub上去。</p>
 <p>我们打开 myblog文件下面的配置文件 <code>_config.yml</code>，翻到最后，将 YourgithubName替换为自己的GitHub账户</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git    //注释：将两个 YourgithubName替换为自己的GitHub名字</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>然后安装 deploy-git ，也就是部署的命令，这样你才能用命令部署到 GitHub。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
+<pre><code>deploy:
+  type: git
+  repo: https://github.com/YourgithubName/YourgithubName.github.io.git    //注释：将两个 YourgithubName替换为自己的GitHub名字
+  branch: master</code></pre><p>然后安装 deploy-git ，也就是部署的命令，这样你才能用命令部署到 GitHub。</p>
+<pre><code class="bash">$ npm install hexo-deployer-git --save</code></pre>
 <p>接着执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean      //清除缓存文件 db.json 和已生成的静态文件 public（也可以不加）</span><br><span class="line">$ hexo generate   //生成网站静态文件到默认设置的 public 文件夹（也常用缩写 hexo g）</span><br><span class="line">$ hexo deploy     //自动生成网站静态文件，并部署到设定的仓库（也常用缩写 hexo d）</span><br></pre></td></tr></table></figure>
-
-<p><strong>注：</strong> deploy时可能要你输入 username 和 password</p>
+<pre><code>$ hexo clean      //清除缓存文件 db.json 和已生成的静态文件 public（也可以不加）
+$ hexo generate   //生成网站静态文件到默认设置的 public 文件夹（也常用缩写 hexo g）
+$ hexo deploy     //自动生成网站静态文件，并部署到设定的仓库（也常用缩写 hexo d）</code></pre><p><strong>注：</strong> deploy时可能要你输入 username 和 password</p>
 <p>得到下图则说明部署成功了！</p>
 <p><img src="/2019/08/04/Blog-Building-Process-1/7.png" alt="部署成功"></p>
 <p>稍等一会儿访问 <code>http://yourname.github.io</code> 你就能看到你自己的博客了！</p>
